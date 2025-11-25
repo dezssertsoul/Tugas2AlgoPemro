@@ -15,51 +15,51 @@ public class Tugas2_AP {
         //Deklarasi Variabel
         Scanner input = new Scanner(System.in);
         String golongan;
-        int JamLembur;
-        double GajiPokok = 0;
-        double GajiLembur = 0;
-        double TotalGaji;
+        int jamLembur;
+        double gajiPokok = 0;
+        double gajiLembur = 0;
+        double totalGaji;
         
         //Input Data
         System.out.println("Perhitungan Gaji Karyawan");
         System.out.print("Masukkan Golongan (A/B/C) : ");
         golongan = input.next().toUpperCase(); //Untuk mengubah input menggunakan huruf kapital
         System.out.print("Masukkan Jam Lembur: ");
-        JamLembur = input.nextInt();
+        jamLembur = input.nextInt();
         System.out.println("------------------------");
         
         //Hitung Gaji Pokok
         if (golongan.equals("A")){
-            GajiPokok = 5000000;
+            gajiPokok = 5000000;
         } else if (golongan.equals("B")){
-            GajiPokok = 6500000;
+            gajiPokok = 6500000;
         } else if (golongan.equals("C")){
-            GajiPokok = 9500000;
+            gajiPokok = 9500000;
         } else {
-            System.out.println("Error = Golongan Tidak Valid!");
+            System.out.println("Error = Golongan Tidak Ada!");
             return;
         }
         
         //Hitung Gaji Lembur
-        if (JamLembur == 1){
-            GajiLembur = 0.30 * GajiPokok;
-        } else if (JamLembur == 2){
-            GajiLembur = 0.32 * GajiPokok;
-        } else if (JamLembur == 3){
-            GajiLembur = 0.34 * GajiPokok;
-        } else if (JamLembur == 4){
-            GajiLembur = 0.36 * GajiPokok;
-        } else if (JamLembur >= 5){
-            GajiLembur = 0.38 * GajiPokok;
+        if (jamLembur == 1){
+            gajiLembur = 0.30 * gajiPokok;
+        } else if (jamLembur == 2){
+            gajiLembur = 0.32 * gajiPokok;
+        } else if (jamLembur == 3){
+            gajiLembur = 0.34 * gajiPokok;
+        } else if (jamLembur == 4){
+            gajiLembur = 0.36 * gajiPokok;
+        } else if (jamLembur >= 5){
+            gajiLembur = 0.38 * gajiPokok;
         } else {
-            System.out.println("Salah Memasukkan Jam");
+            System.out.println("Anda Salah Memasukkan Jam");
         }
         
         //Hitung Total Gaji
-        TotalGaji = GajiPokok + GajiLembur;
+        totalGaji = gajiPokok + gajiLembur;
         
         //Output
-        System.out.println("Total Gaji : Rp. " + String.format("%,.0f",TotalGaji));
+        System.out.println("Total Gaji : Rp. " + String.format("%,.0f", totalGaji));
         
     }
     
